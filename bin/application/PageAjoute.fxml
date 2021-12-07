@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="pageAjoute" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #F7F8FC;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" >
+   <center>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" stylesheets="@../../../../Desktop/GI/S5/POO%20avancée/Projet/AjoutePage/style_ajoute_page.css" BorderPane.alignment="CENTER">
+         <children>
+            <Button alignment="CENTER" contentDisplay="BOTTOM" graphicTextGap="25.0" mnemonicParsing="false" prefHeight="180.0" prefWidth="205.0" text="Ajoute Client" textFill="#9fa2b4">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/icon_add.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="BOTTOM" graphicTextGap="25.0" mnemonicParsing="false" prefHeight="180.0" prefWidth="205.0" text="Ajoute Coach" textFill="#9fa2b4">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/icon_add.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

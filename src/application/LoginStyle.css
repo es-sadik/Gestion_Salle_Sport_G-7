@@ -1,0 +1,16 @@
+.button{
+	-fx-border-color : #fff;
+	-fx-background-radius:12px;
+	/*linear-gradient(#959595,#656565); */
+	/*-fx-background-color :linear-gradient(#000000 20% ,#1497E0 100%);*/
+	-fx-border-radius:12px;
+	-fx-border-width : 2px;
+	
+}
+.button:hover{
+	/*linear-gradient(#656565,#959595) */
+	-fx-background-color :linear-gradient(#000000 80% ,#1497E0 100%);
+	-fx-text-fill:white;
+	/*-fx-graphic: url("@../imgs/icon_login_hover.png");*/
+	-fx-cursor: hand;
+}

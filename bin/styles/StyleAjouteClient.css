@@ -1,0 +1,31 @@
+BorderPane{
+	-fx-background-color: #F7F8FC;
+}
+.btn-success {
+    -fx-border-radius:5px;
+    -fx-text-fill: #fff;
+    -fx-background-color: #28a745;
+    -fx-border-color: #28a745;
+  }
+  
+  
+  .btn-success:hover {
+    -fx-text-fill: #fff;
+    -fx-background-color: #218838;
+    -fx-border-color: #1e7e34;
+  }
+TextField,DatePicker{
+    -fx-font-family: "Quicksand";
+    -fx-font-size: 18;
+    -fx-padding: 1,1,1,1;
+    -fx-background-radius: 12px;
+    -fx-border: gone;
+    -fx-background-color: #EDEFF2;
+    -fx-text-fill: grey;
+         
+}
+ComboBox{
+	-fx-background-radius: 12px;
+	-fx-background-color: #EDEFF2;
+}
+

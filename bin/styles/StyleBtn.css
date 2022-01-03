@@ -1,0 +1,33 @@
+.btnn
+{
+	-fx-margin-left: 150px;
+	-fx-margin-right: 15px;
+	-fx-background-color: #20272f;
+	-fx-text-fill:rgb(255, 255, 255);
+	-fx-cursor: hand;	
+}
+
+#btn_add
+{	
+	-fx-graphic: url("../imgs/add-group_white.png");
+}
+
+#btn_clients
+{
+	-fx-graphic: url("../imgs/users-solid_white.png");
+}
+
+#btn_coachs
+{	
+	-fx-graphic: url("../imgs/Trainer1_white.png");
+}
+
+#btn_gym
+{
+	-fx-graphic: url("../imgs/gym_white.png");
+}
+
+#btn_static
+{
+	-fx-graphic: url("../imgs/statistic_white.png");
+}

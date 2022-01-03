@@ -1,6 +1,7 @@
 package application;
 
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -22,10 +23,15 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class SampleController implements Initializable {
+	public static Stage stage;
+	
+	static String userName;
+	static String Password;
+
 	@FXML
-	private TextField username;
+	public TextField username;
 	@FXML
-	private PasswordField password;
+	public PasswordField password;
 
 	@FXML
 	private Button btnLogin;
@@ -34,27 +40,29 @@ public class SampleController implements Initializable {
 	@FXML
 	private BorderPane rootBorder;
 	
-
+	
+	
 	public void clicK()  {
 
 		if (!logIn()) {
 			msgError.setFill(Color.RED);
 			msgError.setText("Error Username Or Password");
 		} else {
-			try {
-				
-				Stage stage = new Stage();
+			try {	
+				stage.close();
+				stage = new Stage();
 				FXMLLoader fxmlLoader= new FXMLLoader();
-				BorderPane root =(BorderPane)fxmlLoader.load(getClass().getResource("ConfLogin.fxml"));
-				Scene scene=new Scene(root,1165,688);
-				
+				BorderPane root =(BorderPane)fxmlLoader.load(getClass().getResource("../fxmls/ConfLogin.fxml"));
+				Scene scene=new Scene(root);
 				stage.setTitle("Cofirme Login");
+				//stage.setMaximized(true);
+				//stage.setResizable(false);
 				stage.setScene(scene);
 				stage.showAndWait();
+				
 			}catch (Exception e) {
 				e.printStackTrace();	
-				}
-			
+				}	
 		}
 	}
 
@@ -65,19 +73,24 @@ public class SampleController implements Initializable {
 
 	public SampleController() {
 		conn = Connection_DB.ConDB();
+		
+	}
+	public SampleController(Stage stage) {
+		this.stage=stage;
 	}
 
-	/// ---
+	//
 	Connection conn = null;
 	PreparedStatement preparedStatement = null;
 	ResultSet resultSet = null;
 
 	private boolean logIn() {
 		boolean login = true;
-		String userName = username.getText().toString();
-		String Password = password.getText().toString();
+		userName = username.getText().toString();
+		Password = password.getText().toString();
+		
 		// query :
-		String sql = "SELECT * from login where username = ? and password =?";
+		String sql = "SELECT * from login where username = ? and password = ?";
 
 		try {
 			preparedStatement = conn.prepareStatement(sql);
@@ -94,4 +107,46 @@ public class SampleController implements Initializable {
 		}
 		return login;
 	}
+
+	// get && set :
+	public String getUsername() {
+		return userName;
+		
+	}
+
+
+	public String getPassword() {
+		return Password;
+	}
+
+	public void show() {
+		try {
+			BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("../fxmls/Login.fxml"));
+			Scene scene = new Scene(root);
+			//stage.setMaximized(true);
+			//stage.setResizable(false);
+			stage.setTitle("Login");
+			stage.setScene(scene);
+			stage.show();	
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

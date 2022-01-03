@@ -1,0 +1,20 @@
+.btn{
+	-fx-background-color: #FFFFFF;
+	-fx-border-width:0.5px; 
+	-fx-border-color:#9fa2b4;
+	-fx-border-radius:10px;
+	-fx-background-radius:12px;
+	
+
+}
+.btn:hover{
+	
+	-fx-cursor:hand;
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.btn:pressed{
+
+	-fx-effect: innershadow( gaussian, rgba( 0, 0, 0, 0.6 ), 30, 0, 0, 0 );
+	
+}

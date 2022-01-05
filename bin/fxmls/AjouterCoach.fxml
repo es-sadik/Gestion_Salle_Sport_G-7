@@ -25,7 +25,7 @@
             <Insets bottom="50.0" />
          </BorderPane.margin>
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter Client :" wrappingWidth="898.9367705821992">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter Coach :" wrappingWidth="898.9367705821992">
                <font>
                   <Font size="25.0" />
                </font>

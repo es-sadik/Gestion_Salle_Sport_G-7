@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="900.0" prefWidth="1500.0" stylesheets="@../styles/tableView.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ClientsController">
+   <center>
+      <TableView fx:id="ClientsTable" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="900.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
+        <columns>
+            <TableColumn fx:id="imageCol" style="-fx-alignment: center;" prefWidth="104.0" text="Image" />
+            <TableColumn fx:id="firstNameCol" style="-fx-alignment: center;"  prefWidth="150.0" text="First Name" />
+            <TableColumn fx:id="lastNameCol" style="-fx-alignment: center;"  prefWidth="150.0" text="Last Name" />
+            <TableColumn fx:id="emailCol" style="-fx-alignment: center;"  prefWidth="150.0" text="Email" />
+            <TableColumn fx:id="phoneCol" style="-fx-alignment: center;"  prefWidth="150.0" text="Phone" />
+            <TableColumn fx:id="addressCol" style="-fx-alignment: center;"  prefWidth="200.0" text="Address" />
+            <TableColumn fx:id="dateEntryCol" style="-fx-alignment: center;"  prefWidth="150.0" text="Date Entry" />
+            <TableColumn fx:id="paymentCol" style="-fx-alignment: center;"  prefWidth="100.0" text="Payment" />
+            <TableColumn fx:id="typeSportCol" style="-fx-alignment: center;"  prefWidth="140.0" text="Type Sport" />
+            <TableColumn fx:id="actionCol" style="-fx-alignment: center;"  prefWidth="155" text="Action" />
+        </columns>
+      </TableView>
+   </center>
+   <top>
+      <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" prefHeight="100.0" prefWidth="1498.0" BorderPane.alignment="CENTER_LEFT">
+         <children>
+            <TextField fx:id="SearchClient" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="44.0" prefWidth="390.0" promptText="Search in a first name Or last name" style="-fx-background-color: transparent; -fx-border-color: #00CCFF; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button fx:id="Btn_Search" maxWidth="35.0" mnemonicParsing="false" onAction="#ClickBtnSearch" prefHeight="44.0" style="-fx-border-radius: 0px 5px  5px  0px;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <FontAwesomeIconView fill="#00ccff" glyphName="SEARCH" size="30" />
+               </graphic>
+            </Button>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="1055.0">
+               <children>
+                  <FontAwesomeIconView fill="#00e676" glyphName="REFRESH" onMouseClicked="#ClickBtnSearch" size="45" styleClass="btn" />
+               </children>
+            </HBox>
+            
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+</BorderPane>

@@ -12,11 +12,13 @@ import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.Date;
 import java.util.ResourceBundle;
 
 import javax.swing.JOptionPane;
 
+import io.github.gleidson28.GNAvatarView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -40,6 +42,8 @@ public class AjClientController implements Initializable {
 	Connection conn = null;
 	PreparedStatement preparedStatement = null;
 	ResultSet resultSet = null;
+	String sql;
+	private boolean update;
 
 	Stage stage;
 	@FXML
@@ -49,13 +53,15 @@ public class AjClientController implements Initializable {
 
 	@FXML
 	private Button btnUploadImg, btn_save;
+	
 	@FXML
-	ImageView img_profil;
+	GNAvatarView img_profil;
 
 	@FXML
 	private ComboBox<String> type_sport;
 
 	static File file;
+	String EMAIL;
 
 	@FXML
 	void Click_btnUploadImg() {
@@ -75,18 +81,33 @@ public class AjClientController implements Initializable {
 		file = fileChooser.showOpenDialog(stage);
 
 		if (file != null) {
-			Image img = new Image(file.toURI().toString(), 83, 92, true, true);
-			img_profil = new ImageView(img);
-			img_profil.setFitWidth(150);
-			img_profil.setFitHeight(150);
-			img_profil.setPreserveRatio(true);
-			btnUploadImg.setGraphic(img_profil);
-		}
+			Image img = new Image(file.toURI().toString());
+			img_profil.setImage(img);
+			}
+		
 	}
-
+    //
+	public void setTextField(String firstname ,String lastname, String Email ,String Phone,String Address,Date dateentry,ImageView img,String typesport,float Payment) {
+		EMAIL = Email;
+		
+		first_name.setText(firstname);
+		last_name.setText(lastname);
+		email.setText(Email);
+		phone.setText(Phone);
+		adress.setText(Address);
+		LocalDate localDate = LocalDate.parse( new SimpleDateFormat("yyyy-MM-dd").format(dateentry));
+		date_entry.setValue(localDate);
+		img_profil.setImage(img.getImage());
+		type_sport.setValue(typesport);
+		String payment_=Float.toString(Payment);
+		payment.setText(payment_);
+	}
+	
+	
 	@FXML
 	void Click_btn_save() {
-		// first_name, last_name, email, adress, phone, payment;
+		ClientsController clientsController = new ClientsController();
+
 		String First_name = first_name.getText().toString();
 		String Last_name = last_name.getText().toString();
 		String Email = email.getText().toString();
@@ -94,14 +115,30 @@ public class AjClientController implements Initializable {
 		String Address = adress.getText().toString();
 		Float Payment = Float.valueOf(payment.getText().toString());
 		String Type_sport = type_sport.getSelectionModel().getSelectedItem();
-		String image = file.toURI().toString();
+		String Srcimage;
+		if(!update && file  == null) {
+			Srcimage = "file:/C:/Users/Sys/workspace/Salle%20sports/src/imgs/DefaultProfile.jpg";
+		}
+		else if(update && file==null) {
+			Srcimage =img_profil.getImage().impl_getUrl();
+		}
+		else {
+			Srcimage=file.toURI().toString();
+		}
+		
+		
 		// get Date of entry :
 		LocalDate Date_entry = date_entry.getValue();
 		
-		System.out.println(Date_entry+"\n"+Payment);
-		// query :
+		
+		// 
+		if (update == false) {
+			
+			sql = "insert into clients values( ? , ? , ? , ? , ? , ? , ? , ? , ? ) ";
+		}else {
 
-		String sql = "insert into clients values( ? , ? , ? , ? , ? , ? , ? , ? , ? ) ";
+		   sql ="UPDATE clients set first_name = ? , last_name = ? , email = ? , phone = ? , address = ? , date_entry = ? , payment = ? , type_sport = ? , image = ? WHERE email ='"+EMAIL+"'";
+		}
 		try {
 			preparedStatement = conn.prepareStatement(sql);
 			preparedStatement.setString(1, First_name);
@@ -112,18 +149,43 @@ public class AjClientController implements Initializable {
 			preparedStatement.setDate(6,java.sql.Date.valueOf(Date_entry));
 			preparedStatement.setFloat(7, Payment);
 			preparedStatement.setString(8, Type_sport);
-			preparedStatement.setString(9, image);
+			preparedStatement.setString(9, Srcimage);
 			preparedStatement.execute();
 
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-	}
+		Clear();
+		if(update) {
+			clientsController.stage.close();
+			
+		}
 
+	}
+          // Clear TextFields :
+	void Clear() {//
+		first_name.clear();
+		last_name.clear();
+		email.clear();
+		adress.clear();
+		phone.clear();
+		payment.clear();
+		date_entry.setValue(null);
+		
+		
+	}
+	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		ObservableList<String> list = FXCollections.observableArrayList("Box", "Karate", "Musculation");
 		type_sport.setItems(list);
 
 	}
+	
+	//
+	 void setUpdate(boolean b) {
+	        this.update = b;
+
+	    }
+	
 }

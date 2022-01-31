@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4fcc39f4-3b78-4d70-830c-448c85b4cb8f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/application/AjClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/application/AjClientController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/application/AjCoachController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/application/AjCoachController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/application/ConfLoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/application/Connection_DB.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/application/Connection_DB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/application/GNAvatarView-1.0.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/application/SampleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/application/SampleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/application/menuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/application/menuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/fxmls/AjouterClient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/fxmls/AjouterClient.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/fxmls/AjouterCoach.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/fxmls/AjouterCoach.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/fxmls/ConfLogin.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/fxmls/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/fxmls/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/fxmls/Menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/fxmls/Menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/fxmls/PageAjoute.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/fxmls/PageAjoute.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/fxmls/gym.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/fxmls/gym.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/styles/MenuStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/bin/styles/MenuStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/styles/StyleAjouteClient.css" beforeDir="false" afterPath="$PROJECT_DIR$/bin/styles/StyleAjouteClient.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/styles/StyleBtn.css" beforeDir="false" afterPath="$PROJECT_DIR$/bin/styles/StyleBtn.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/AjClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/AjClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/AjCoachController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/AjCoachController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/ConfLoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Connection_DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Connection_DB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/GNAvatarView-1.0.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/SampleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/SampleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/menuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/menuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxmls/AjouterClient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxmls/AjouterClient.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxmls/AjouterCoach.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxmls/AjouterCoach.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxmls/ConfLogin.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxmls/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxmls/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxmls/Menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxmls/Menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxmls/PageAjoute.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxmls/PageAjoute.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxmls/gym.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxmls/gym.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/MenuStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/MenuStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/StyleAjouteClient.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/StyleAjouteClient.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/StyleBtn.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/StyleBtn.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="24Rb5hfRRAqbrBUqQ5NXZKePrPS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4fcc39f4-3b78-4d70-830c-448c85b4cb8f" name="Changes" comment="" />
+      <created>1643596166633</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1643596166633</updated>
+    </task>
+    <servers />
+  </component>
+</project>

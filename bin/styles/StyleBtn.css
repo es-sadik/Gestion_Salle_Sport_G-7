@@ -31,3 +31,6 @@
 {
 	-fx-graphic: url("../imgs/statistic_white.png");
 }
+#btn_setting{
+	-fx-graphic: url("../imgs/setting_icon_white.png");
+}

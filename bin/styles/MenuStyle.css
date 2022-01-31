@@ -51,3 +51,20 @@
 {
 	-fx-graphic: url("../imgs/statistic_white.png");
 }
+#btn_setting{
+	-fx-graphic: url("../imgs/setting_icon_black.png");
+}
+#btn_setting:hover{
+	-fx-graphic: url("../imgs/setting_icon_white.png");
+}
+#center{
+	-fx-background-color:#F7F8FC;
+}
+
+
+
+
+
+
+
+

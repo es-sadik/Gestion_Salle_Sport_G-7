@@ -12,20 +12,20 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688.0" prefWidth="1165.0" stylesheets="@../styles/MenuStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.menuController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688.0" prefWidth="1165.0" stylesheets="@../styles/MenuStyle.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.menuController">
    <left>
       <VBox prefHeight="653.0" prefWidth="255.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="CENTER" cacheShape="false" centerShape="false" maxHeight="-Infinity" minHeight="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="77.0" prefWidth="255.0">
+            <HBox alignment="CENTER" cacheShape="false" centerShape="false" maxHeight="-Infinity" minHeight="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="77.0" prefWidth="255.0" style="-fx-background-color: transparent;">
                <children>
                   <ImageView disable="true" fitHeight="125.0" fitWidth="148.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER">
                      <image>
-                        <Image url="@../imgs/Layer.png" />
+                        <Image url="@../imgs/LOGOLeft.png" />
                      </image>
                   </ImageView>
                </children>
             </HBox>
-            <VBox prefHeight="403.0" prefWidth="255.0">
+            <VBox prefHeight="401.0" prefWidth="255.0">
                <children>
                   <Button fx:id="btn_add" graphicTextGap="20.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClikBtnAdd" prefHeight="83.0" prefWidth="255.0" styleClass="btnn" text="Add" textFill="#929292">
                      <font>
@@ -81,6 +81,21 @@
                   <Insets top="25.0" />
                </VBox.margin>
             </VBox>
+            <VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="194.0" prefWidth="255.0" />
+            <Button fx:id="btn_setting" graphicTextGap="20.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickBtnSetting" prefHeight="83.0" prefWidth="255.0" styleClass="btnn" text="Settings" textFill="#929292">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" right="15.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
          </children>
          <BorderPane.margin>
             <Insets top="-80.0" />
@@ -102,7 +117,7 @@
                   </Text>
                   <GNAvatarView prefHeight="138.0" prefWidth="102.0" stroke="#dacaca" type="CIRCLE">
                      <image>
-                        <Image url="@../imgs/profile.jpg" />
+                        <Image url="@../imgs/img2.jpg" />
                      </image>
                      <HBox.margin>
                         <Insets bottom="10.0" right="10.0" top="10.0" />
@@ -120,6 +135,13 @@
       </HBox>
    </top>
    <center>
-      <BorderPane fx:id="center" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1000.0" prefWidth="2000.0" BorderPane.alignment="CENTER" />
+      <BorderPane fx:id="center" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1000.0" prefWidth="2000.0" BorderPane.alignment="CENTER">
+         <center>
+            <ImageView fitHeight="608.0" fitWidth="600.0" pickOnBounds="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../imgs/LOGOCenter.png" />
+               </image>
+            </ImageView>
+         </center></BorderPane>
    </center>
 </BorderPane>

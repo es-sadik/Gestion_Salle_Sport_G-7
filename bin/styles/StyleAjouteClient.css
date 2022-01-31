@@ -3,6 +3,7 @@ BorderPane{
 }
 .btn-success {
     -fx-border-radius:5px;
+    -fx-background-radius: 5px;
     -fx-text-fill: #fff;
     -fx-background-color: #28a745;
     -fx-border-color: #28a745;
@@ -14,7 +15,7 @@ BorderPane{
     -fx-background-color: #218838;
     -fx-border-color: #1e7e34;
   }
-TextField,DatePicker{
+TextField,PasswordField,DatePicker{
     -fx-font-family: "Quicksand";
     -fx-font-size: 18;
     -fx-padding: 1,1,1,1;

@@ -13,7 +13,7 @@ import javafx.scene.text.Text;
 
 public class menuController implements Initializable {
 	@FXML
-	private Button btn_add, btn_clients, btn_coachs, btn_gym, btn_static;
+	private Button btn_add, btn_clients, btn_coachs, btn_gym, btn_static ,btn_setting;
 	@FXML
 	private BorderPane center;
 
@@ -22,7 +22,7 @@ public class menuController implements Initializable {
 	BorderPane pageAjoute;
 	Button btn_ajouteClient, btn_ajouteCoach;
 
-	Text text = new Text();
+	
 
 	public void ClikBtnAdd() {
 		ClearStyle();
@@ -33,7 +33,6 @@ public class menuController implements Initializable {
 			BorderPane pageAjoute = (BorderPane) FXMLLoader.load(getClass().getResource("../fxmls/PageAjoute.fxml"));
 			center.setCenter(pageAjoute);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -43,10 +42,12 @@ public class menuController implements Initializable {
 		ClearStyle();
 		btn_clients.getStylesheets().add(getClass().getResource("../styles/StyleBtn.css").toExternalForm());
 		center.getChildren().clear();
-		text.setText(btn_clients.getText());
-		text.setStyle("-fx-font: 24 arial");
-		center.setCenter(text);
-		center.setStyle("-fx-background-color : #eee000");
+		try {
+			BorderPane clients = (BorderPane) FXMLLoader.load(getClass().getResource("../fxmls/Clients.fxml"));
+			center.setCenter(clients);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	//
@@ -54,10 +55,14 @@ public class menuController implements Initializable {
 		ClearStyle();
 		btn_coachs.getStylesheets().add(getClass().getResource("../styles/StyleBtn.css").toExternalForm());
 		center.getChildren().clear();
-		text.setText("Coachs");
-		text.setStyle("-fx-font: 24 arial");
-		center.setCenter(text);
-		center.setStyle("-fx-background-color : #ad0");
+		try {
+			BorderPane clients = (BorderPane) FXMLLoader.load(getClass().getResource("../fxmls/Coachs.fxml"));
+			center.setCenter(clients);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 
 	//
@@ -79,10 +84,33 @@ public class menuController implements Initializable {
 		ClearStyle();
 		btn_static.getStylesheets().add(getClass().getResource("../styles/StyleBtn.css").toExternalForm());
 		center.getChildren().clear();
-		text.setText("Static");
-		text.setStyle("-fx-font: 24 arial");
-		center.setCenter(text);
-		center.setStyle("-fx-background-color : #d9267d");
+		try {
+			BorderPane profile = (BorderPane) FXMLLoader.load(getClass().getResource("../fxmls/Static.fxml"));
+			center.setCenter(profile);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+	
+	public void ClickBtnSetting() {
+		ClearStyle();
+		btn_setting.getStylesheets().add(getClass().getResource("../styles/StyleBtn.css").toExternalForm());
+		center.getChildren().clear();
+		try {
+			BorderPane profile = (BorderPane) FXMLLoader.load(getClass().getResource("../fxmls/ProfileManager.fxml"));
+			center.setCenter(profile);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		
 	}
 
 	@Override
@@ -119,6 +147,7 @@ public class menuController implements Initializable {
 		btn_coachs.getStylesheets().clear();
 		btn_gym.getStylesheets().clear();
 		btn_static.getStylesheets().clear();
+		btn_setting.getStylesheets().clear();
 	}
 
 }
